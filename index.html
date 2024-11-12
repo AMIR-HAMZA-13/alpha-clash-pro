@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = 'light'>
+<html lang="en" data-theme='light'>
 
 <head>
         <meta charset="UTF-8">
@@ -23,7 +23,8 @@
                         <div class="space-y-9">
                                 <h1 class="font-anton text-[150px]">ALPHABET CLASH</h1>
                                 <p class="text-xl font-bold">Unleash Your keyboard Kung Fu : Pres "Enter" to Play</p>
-                                <button onclick="playNow()" class="font-poppins text-xl btn bg-white text-black">Play Now</button>
+                                <button onclick="playNow()" class="font-poppins text-xl btn bg-white text-black">Play
+                                        Now</button>
                         </div>
                 </section>
 
@@ -41,7 +42,8 @@
                                         </div>
 
                                         <div class="flex justify-center items-center h-full">
-                                                <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+                                                <p id="current-alphabet"
+                                                        class="text-black text-9xl font-bold uppercase">Y</p>
                                         </div>
                                 </div>
 
@@ -82,31 +84,42 @@
                                                 <kbd id="m" class="kbd">m</kbd>
                                                 <kbd id="/" class="kbd">/</kbd>
                                         </div>
+
+
                                 </div>
 
 
                                 <!-- life score -->
                                 <div class="flex justify-around w-full ">
+                                        <!-- display Life -->
                                         <button class="btn bg-violet-700 rounded-full text-white ">Life <i
                                                         class="fa-solid fa-heart-circle-bolt text-xl"></i>
-                                                <span>1</span>
+                                                <span id="current-life">5</span>
                                         </button>
+                                        <!-- display score -->
                                         <button class="btn btn-primary rounded-full text-white">Score <i
                                                         class="fa-solid fa-dollar-sign bg-white p-1  text-black rounded-[50%]"></i>
-                                                1
+                                                <span id="current-score">0</span>
+
                                         </button>
                                 </div>
+
+                                <h2 class="text-xl text-red-300 text-center mt-80">If you want close this game : <br>
+                                        Press the Esc button on your keyboard</h2>
+
                         </div>
                 </section>
 
 
 
                 <!-- score section -->
-                <section id="score" class="hidden flex justify-center items-center min-h-screen  ">
+                <section id="final-score" class="hidden flex justify-center items-center min-h-screen  ">
                         <div
                                 class="text-white text-center space-y-8 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-500 px-8 py-12">
-                                <h1 class="text-8xl"><span class="font-extrabold">Score : </span> <span> 14 </span></h1>
-                                <button class="btn text-black bg-white">Play Again</button>
+                                <h3 class="text-3xl text-red-200">Game Over !</h3>
+                                <h1 class="text-8xl"><span class="font-extrabold">Score : </span> <span
+                                                id="generate-score"> 14 </span></h1>
+                                <button onclick="playNow()" class="btn text-black bg-white">Play Again</button>
                                 <p>Practice will make you Pro</p>
                         </div>
                 </section>
@@ -115,8 +128,8 @@
 
 
         <!-- javascript link -->
-<script src="js/utility.js"></script>
-<script src="js/index.js"></script>
+        <script src="js/utility.js"></script>
+        <script src="js/index.js"></script>
 </body>
 
 </html>

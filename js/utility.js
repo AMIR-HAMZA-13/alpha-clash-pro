@@ -24,11 +24,31 @@ function removeKbdBgColor(elementId){
         element.classList.remove('bg-orange-400');
 }
 
+// common function for current score
+function getTextElementValueById(elementId){
+        const element = document.getElementById(elementId);
+        const elementValueText = element.innerText;
+        const value = parseInt(elementValueText);
+        return value;
+}
+//common function for current life
+function setTextElementValueById(elementId, value){
+        const element = document.getElementById(elementId);
+        element.innerText = value;
+}
+
+//common function for remove every alphabet bg color
+function getElementTextById(elementId){
+        const element = document.getElementById(elementId);
+        const alphabetText = element.innerText;
+        return alphabetText;
+}
+
 /** 
 
 //note : Math.random(); dile by defalt vabe 0 thek 1 er modde random number dey,, and se number hoy fraction mane vongnasho number,, Math.random()*25 ; dile sorbosso 25 er modde kar random number dibe,,  ja vongnanghso,, Math.random()*25 er paramitter ke jodi round kore deya jay tahole ta 0 theke 25 er modde kar purno number dibe;
 
-// get a random alphabet function
+// generate a random alphabet function
 function getARandomAlphabet() {
         //get or create an alphabet array
         const alphabetsString = 'abcdefghijklmnopqrstuvwxyz';// set all alphabet in a string
@@ -58,3 +78,4 @@ function getARandomAlphabet() {
         const alphabet = alphabets[index];
         return alphabet;
 }
+
